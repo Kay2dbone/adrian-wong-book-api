@@ -14,7 +14,7 @@ const getData = async () => {
   try {
     const { data } = await axios.post('https://api.bookmanager.com/tbm/nearbyStores/get', formData)
     console.log(data.rows) 
-    const books = data.rows
+    const books = data.rows /// =>>>>>> THIS IS THE JSON YOU NEED!!!
     setState(books)
   } catch (error) {
     console.log('errr:::::', error)
